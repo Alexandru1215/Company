@@ -1,6 +1,6 @@
 # Company
 
 Spring boot - 
-Postman 
-MySQL 
--CRUD 
+Postman -
+MySQL -
+CRUD 
