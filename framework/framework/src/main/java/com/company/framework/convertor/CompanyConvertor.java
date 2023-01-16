@@ -2,11 +2,12 @@ package com.company.framework.convertor;
 
 import com.company.framework.dto.CompanyCreateDto;
 import com.company.framework.dto.CompanyInfoDto;
+import com.company.framework.dto.CompanyShortInfoDto;
 import com.company.framework.entity.Company;
 
 public class CompanyConvertor {
 
-    public static Company convertDtoEntity (CompanyCreateDto companyCreateDto){
+    public static Company convertDtoEntity(CompanyCreateDto companyCreateDto) {
         Company company = new Company();
         company.setName(companyCreateDto.getName());
         company.setAddress(companyCreateDto.getAddress());
@@ -16,7 +17,7 @@ public class CompanyConvertor {
         return company;
     }
 
-    public static CompanyInfoDto convertEntityToInfoDto(Company company){
+    public static CompanyInfoDto convertEntityToInfoDto(Company company) {
         CompanyInfoDto companyInfoDto = new CompanyInfoDto();
         companyInfoDto.setId(company.getId());
         companyInfoDto.setName(company.getName());
@@ -27,5 +28,12 @@ public class CompanyConvertor {
         return companyInfoDto;
     }
 
+    //metoda de convert
+    public static CompanyShortInfoDto enityToShortInfoDto(Company company) {
+        CompanyShortInfoDto infoDto = new CompanyShortInfoDto();
+        infoDto.setName(company.getName());
+        infoDto.setRegisterNumber(company.getRegisterNumber());
+        return infoDto;
+    }
 
 }

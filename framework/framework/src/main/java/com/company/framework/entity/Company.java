@@ -10,6 +10,7 @@ public class Company {
     private int id;
 
     @Column
+
     private String name;
     @Column
     private Long registerNumber;
